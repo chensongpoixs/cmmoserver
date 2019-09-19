@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ApplicationService.cc" />
+    <ClCompile Include="atMacroString.cc" />
+    <ClCompile Include="BuildInfo.cc" />
+    <ClCompile Include="byte_buffer.cc" />
+    <ClCompile Include="byte_buffer_unittest.cc" />
+    <ClCompile Include="Crc.cc" />
+    <ClCompile Include="crc_unittest.cc" />
+    <ClCompile Include="Event.cc" />
+    <ClCompile Include="event_dispatcher_unittest.cc" />
+    <ClCompile Include="event_unittest.cc" />
+    <ClCompile Include="EventDispatcher.cc" />
+    <ClCompile Include="hash_string_unittest.cc" />
+    <ClCompile Include="HashString.cc" />
+    <ClCompile Include="out_of_band_unittest.cc" />
+    <ClCompile Include="OutOfBand.cc" />
+    <ClCompile Include="Server.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ApplicationService.h" />
+    <ClInclude Include="atMacroString.h" />
+    <ClInclude Include="BuildInfo.h" />
+    <ClInclude Include="byte_buffer.h" />
+    <ClInclude Include="byte_buffer-inl.h" />
+    <ClInclude Include="Crc.h" />
+    <ClInclude Include="declspec.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="EventDispatcher.h" />
+    <ClInclude Include="HashString.h" />
+    <ClInclude Include="IServer.h" />
+    <ClInclude Include="OutOfBand.h" />
+    <ClInclude Include="Server.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+  </ItemGroup>
+</Project>
