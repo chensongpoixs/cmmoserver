@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Script.cpp" />
+    <ClCompile Include="ScriptEngine.cpp" />
+    <ClCompile Include="ScriptEngineLib.cpp" />
+    <ClCompile Include="ScriptEventListener.cpp" />
+    <ClCompile Include="ScriptSupport.cpp" />
+    <ClCompile Include="glue_files\LuaInterface.cpp">
+      <Filter>glue_files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Script.h" />
+    <ClInclude Include="ScriptEngine.h" />
+    <ClInclude Include="ScriptEngineLib.h" />
+    <ClInclude Include="ScriptEventListener.h" />
+    <ClInclude Include="ScriptSupport.h" />
+    <ClInclude Include="glue_files\LuaInterface.h">
+      <Filter>glue_files</Filter>
+    </ClInclude>
+    <ClInclude Include="glue_files\tolua++.h">
+      <Filter>glue_files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="glue_files">
+      <UniqueIdentifier>{d4779a26-7f0d-4e3b-862e-432749fa76c3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="glue_files\LuaCommonMessages.pkg">
+      <Filter>glue_files</Filter>
+    </None>
+    <None Include="glue_files\LuaInterface.pkg">
+      <Filter>glue_files</Filter>
+    </None>
+    <None Include="glue_files\LuaObject.pkg">
+      <Filter>glue_files</Filter>
+    </None>
+    <None Include="glue_files\LuaObjectControllerCommandMap.pkg">
+      <Filter>glue_files</Filter>
+    </None>
+    <None Include="glue_files\LuaScript.pkg">
+      <Filter>glue_files</Filter>
+    </None>
+    <None Include="glue_files\LuaScriptEngine.pkg">
+      <Filter>glue_files</Filter>
+    </None>
+    <None Include="glue_files\LuaScriptSupport.pkg">
+      <Filter>glue_files</Filter>
+    </None>
+    <None Include="glue_files\LuaTutorial.pkg">
+      <Filter>glue_files</Filter>
+    </None>
+    <None Include="glue_files\LuaWorldManager.pkg">
+      <Filter>glue_files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

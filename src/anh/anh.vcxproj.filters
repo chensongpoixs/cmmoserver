@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="byte_buffer.cc" />
+    <ClCompile Include="byte_buffer_unittest.cc" />
+    <ClCompile Include="crc.cc" />
+    <ClCompile Include="crc_unittest.cc" />
+    <ClCompile Include="hash_string.cc" />
+    <ClCompile Include="hash_string_unittest.cc" />
+    <ClCompile Include="utilities_unittest.cc" />
+    <ClCompile Include="event_dispatcher\event_dispatcher.cc">
+      <Filter>event_dispatcher</Filter>
+    </ClCompile>
+    <ClCompile Include="event_dispatcher\event_dispatcher_unittest.cc">
+      <Filter>event_dispatcher</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="byte_buffer.h" />
+    <ClInclude Include="byte_buffer-inl.h" />
+    <ClInclude Include="crc.h" />
+    <ClInclude Include="hash_string.h" />
+    <ClInclude Include="utilities.h" />
+    <ClInclude Include="event_dispatcher\basic_event.h">
+      <Filter>event_dispatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="event_dispatcher\event_dispatcher.h">
+      <Filter>event_dispatcher</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="event_dispatcher">
+      <UniqueIdentifier>{727fdc77-9fed-4bbc-91ed-acce1892d778}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

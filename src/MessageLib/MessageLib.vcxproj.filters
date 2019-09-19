@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="BuildingMessages.cpp" />
+    <ClCompile Include="CommonMessages.cpp" />
+    <ClCompile Include="CreatureMessages.cpp" />
+    <ClCompile Include="FactoryCrateMessages.cpp" />
+    <ClCompile Include="HarvesterMessages.cpp" />
+    <ClCompile Include="IntangibleMessages.cpp" />
+    <ClCompile Include="InternalMessages.cpp" />
+    <ClCompile Include="ManSchematicMessages.cpp" />
+    <ClCompile Include="MessageLib.cpp" />
+    <ClCompile Include="MissionMessages.cpp" />
+    <ClCompile Include="ObjControllerMessages.cpp" />
+    <ClCompile Include="PlayerMessages.cpp" />
+    <ClCompile Include="ResourceContainerMessages.cpp" />
+    <ClCompile Include="StaticMessages.cpp" />
+    <ClCompile Include="StructureMessages.cpp" />
+    <ClCompile Include="SystemMessages.cpp" />
+    <ClCompile Include="TangibleMessages.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MessageLib.h" />
+  </ItemGroup>
+</Project>
