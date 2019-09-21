@@ -139,7 +139,8 @@ public:
     PlayerObject*		getTeacher() {
         return mteacher;
     }
-    void				setTeacher(PlayerObject* teacher) {
+    void				setTeacher(PlayerObject* teacher) 
+	{
         mteacher = teacher;
     }
 

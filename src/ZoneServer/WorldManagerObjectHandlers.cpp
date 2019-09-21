@@ -258,8 +258,10 @@ bool WorldManager::addObject(std::shared_ptr<Object> object, bool manual)
 
     mObjectMap.insert(key,object.get());
     
-	if(manual)
+	if (manual)
+	{
 		return true;
+	}
 
 	switch(object->getType())
 	{

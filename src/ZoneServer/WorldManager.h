@@ -176,7 +176,8 @@ class WorldManager : public ObjectFactoryCallback, public DatabaseCallback, publ
 {
 public:
 
-    static WorldManager*	getSingletonPtr() {
+    static WorldManager*	getSingletonPtr() 
+	{
         return mSingleton;
     }
     static WorldManager*	Init(uint32 zoneId, ZoneServer* zoneServer,Database* database, uint16 heightmapResolution, bool writeResourceMaps, std::string zoneName);
@@ -378,7 +379,8 @@ public:
     std::pair<std::wstring,uint32>	getRandNpcChatter();
 
     // get planet, trn file name
-    const int8* getPlanetNameThis() const {
+    const int8* getPlanetNameThis() const
+	{
         return mvPlanetNames[mZoneId].getAnsi();
     }
     const int8* getPlanetNameById(uint8 planetId) const {

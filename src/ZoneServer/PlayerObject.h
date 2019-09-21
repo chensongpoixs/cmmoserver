@@ -178,7 +178,10 @@ class PlayerObject : public CreatureObject
         void				setJediState(uint32 js){ mJediState = js; }
 
         // survey
-        bool				getSurveyState(){ return mSampleNode.mPendingSurvey; }
+        bool				getSurveyState()
+		{
+			return mSampleNode.mPendingSurvey; 
+		}
         void				setSurveyState(bool state){ mSampleNode.mPendingSurvey = state; }
 
         // sample

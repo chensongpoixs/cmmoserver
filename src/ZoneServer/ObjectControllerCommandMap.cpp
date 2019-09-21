@@ -81,8 +81,10 @@ ObjectControllerCommandMap* ObjectControllerCommandMap::Init(Database* database)
         mInsFlag = true;
         return mSingleton;
     }
-    else
-        return mSingleton;
+	else
+	{
+		return mSingleton;
+	}
 }
 
 //======================================================================================================================

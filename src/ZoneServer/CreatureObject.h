@@ -186,7 +186,10 @@ class CreatureObject : public MovingObject
             uint64_t        getAction(){return action;}
             void            toggleActionOn(CreatureState state){ action = action | state; }
             void            toggleActionOff(CreatureState state){ action = action & ~ state; }
-            bool            checkState(CreatureState state){ return ((action & state) == state); }
+            bool            checkState(CreatureState state)
+			{
+				return ((action & state) == state);
+			}
             bool            checkStates(uint64_t states){ return ((action & states) == states); }
             bool            checkStatesEither(uint64_t states){ return ((action & states) != 0); }
             // clear states, do not call directly

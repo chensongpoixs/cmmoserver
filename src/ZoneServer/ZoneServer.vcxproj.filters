@@ -1,37 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClInclude Include="AbstractState.h" />
-    <ClInclude Include="ActionState.h" />
-    <ClInclude Include="ActionStateEvent.h" />
     <ClInclude Include="ActiveConversation.h" />
     <ClInclude Include="AdminManager.h" />
-    <ClInclude Include="ArtisanHeightmapAsyncContainer.h" />
-    <ClInclude Include="ArtisanManager.h" />
-    <ClInclude Include="AttackableCreature.h" />
-    <ClInclude Include="AttackableStaticNpc.h" />
-    <ClInclude Include="Badge.h" />
-    <ClInclude Include="BadgeRegion.h" />
-    <ClInclude Include="BadgeRegionFactory.h" />
-    <ClInclude Include="Bank.h" />
-    <ClInclude Include="BankTerminal.h" />
     <ClInclude Include="BazaarTerminal.h" />
-    <ClInclude Include="Buff.h" />
-    <ClInclude Include="BuffAttributeEnums.h" />
-    <ClInclude Include="BuffDBItem.h" />
-    <ClInclude Include="BuffEvent.h" />
-    <ClInclude Include="BuffIconsEnum.h" />
-    <ClInclude Include="BuffManager.h" />
-    <ClInclude Include="BugJar.h" />
-    <ClInclude Include="BuildingEnums.h" />
-    <ClInclude Include="BuildingFactory.h" />
-    <ClInclude Include="BuildingObject.h" />
-    <ClInclude Include="Camp.h" />
-    <ClInclude Include="CampRegion.h" />
-    <ClInclude Include="CampTerminal.h" />
-    <ClInclude Include="CellFactory.h" />
     <ClInclude Include="CellObject.h" />
-    <ClInclude Include="ChanceCube.h" />
     <ClInclude Include="CharacterBuilderTerminal.h" />
     <ClInclude Include="CharacterLoginHandler.h" />
     <ClInclude Include="CharSheetManager.h" />
@@ -42,7 +15,6 @@
     <ClInclude Include="CombatManager.h" />
     <ClInclude Include="Container.h" />
     <ClInclude Include="ContainerManager.h" />
-    <ClInclude Include="ContainerObjectFactory.h" />
     <ClInclude Include="Conversation.h" />
     <ClInclude Include="ConversationManager.h" />
     <ClInclude Include="CraftBatch.h" />
@@ -51,8 +23,6 @@
     <ClInclude Include="CraftingSession.h" />
     <ClInclude Include="CraftingSessionCallBack.h" />
     <ClInclude Include="CraftingSessionFactory.h" />
-    <ClInclude Include="CraftingStation.h" />
-    <ClInclude Include="CraftingTool.h" />
     <ClInclude Include="CreatureEnums.h" />
     <ClInclude Include="CreatureFactory.h" />
     <ClInclude Include="CreatureObject.h" />
@@ -61,7 +31,6 @@
     <ClInclude Include="Datapad.h" />
     <ClInclude Include="DatapadFactory.h" />
     <ClInclude Include="declspec.h" />
-    <ClInclude Include="Deed.h" />
     <ClInclude Include="DraftSchematic.h" />
     <ClInclude Include="DraftSlot.h" />
     <ClInclude Include="DraftWeight.h" />
@@ -77,14 +46,11 @@
     <ClInclude Include="EVSurveySample.h" />
     <ClInclude Include="EVWeapon.h" />
     <ClInclude Include="FactoryBase.h" />
-    <ClInclude Include="FactoryCrate.h" />
     <ClInclude Include="FactoryFactory.h" />
     <ClInclude Include="FactoryObject.h" />
     <ClInclude Include="FillerNPC.h" />
-    <ClInclude Include="Firework.h" />
     <ClInclude Include="FireworkEvent.h" />
     <ClInclude Include="FireworkManager.h" />
-    <ClInclude Include="Food.h" />
     <ClInclude Include="ForageManager.h" />
     <ClInclude Include="Furniture.h" />
     <ClInclude Include="GroupManager.h" />
@@ -97,31 +63,23 @@
     <ClInclude Include="HamService.h" />
     <ClInclude Include="HarvesterFactory.h" />
     <ClInclude Include="HarvesterObject.h" />
-    <ClInclude Include="Heightmap.h" />
-    <ClInclude Include="HeightmapAsyncContainer.h" />
-    <ClInclude Include="HeightMapCallback.h" />
     <ClInclude Include="HouseFactory.h" />
     <ClInclude Include="HouseObject.h" />
     <ClInclude Include="IncapRecoveryEvent.h" />
     <ClInclude Include="InjuryTreatmentEvent.h" />
-    <ClInclude Include="Instrument.h" />
     <ClInclude Include="InsuranceTerminal.h" />
     <ClInclude Include="IntangibleFactory.h" />
     <ClInclude Include="IntangibleObject.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="InventoryFactory.h" />
-    <ClInclude Include="Item.h" />
     <ClInclude Include="Item_Enums.h" />
     <ClInclude Include="ItemDeleteEvent.h" />
     <ClInclude Include="ItemFactory.h" />
-    <ClInclude Include="ItemTerminal.h" />
     <ClInclude Include="LairObject.h" />
     <ClInclude Include="LocomotionState.h" />
     <ClInclude Include="LocomotionStateEvent.h" />
     <ClInclude Include="LogOutEvent.h" />
-    <ClInclude Include="ManufacturingSchematic.h" />
     <ClInclude Include="MedicHandlerHelpers.h" />
-    <ClInclude Include="Medicine.h" />
     <ClInclude Include="MedicManager.h" />
     <ClInclude Include="MissionBag.h" />
     <ClInclude Include="MissionFactory.h" />
@@ -139,19 +97,6 @@
     <ClInclude Include="NpcIdentifier.h" />
     <ClInclude Include="NpcManager.h" />
     <ClInclude Include="NPCObject.h" />
-    <ClInclude Include="objcontrollercommandmessage.h" />
-    <ClInclude Include="ObjControllerEvent.h" />
-    <ClInclude Include="Object.h" />
-    <ClInclude Include="Object_Enums.h" />
-    <ClInclude Include="ObjectContainer.h" />
-    <ClInclude Include="ObjectController.h" />
-    <ClInclude Include="ObjectControllerCommandMap.h" />
-    <ClInclude Include="ObjectControllerDispatch.h" />
-    <ClInclude Include="ObjectControllerOpcodes.h" />
-    <ClInclude Include="ObjectFactory.h" />
-    <ClInclude Include="ObjectFactoryCallback.h" />
-    <ClInclude Include="OCCommonHandlers.h" />
-    <ClInclude Include="OCStructureHandlers.h" />
     <ClInclude Include="PersistentNpcFactory.h" />
     <ClInclude Include="PlayerEnums.h" />
     <ClInclude Include="PlayerObject.h" />
@@ -183,7 +128,6 @@
     <ClInclude Include="SampleEvent.h" />
     <ClInclude Include="SchematicGroup.h" />
     <ClInclude Include="SchematicManager.h" />
-    <ClInclude Include="Scout.h" />
     <ClInclude Include="ScoutManager.h" />
     <ClInclude Include="SendSystemMailMessage.h" />
     <ClInclude Include="Shuttle.h" />
@@ -203,7 +147,6 @@
     <ClInclude Include="StructureHeightmapAsyncContainer.h" />
     <ClInclude Include="StructureManager.h" />
     <ClInclude Include="SurveyEvent.h" />
-    <ClInclude Include="SurveyTool.h" />
     <ClInclude Include="TangibleEnums.h" />
     <ClInclude Include="TangibleFactory.h" />
     <ClInclude Include="TangibleObject.h" />
@@ -216,7 +159,6 @@
     <ClInclude Include="Trainer.h" />
     <ClInclude Include="TravelMapHandler.h" />
     <ClInclude Include="TravelTerminal.h" />
-    <ClInclude Include="TravelTicket.h" />
     <ClInclude Include="TreasuryManager.h" />
     <ClInclude Include="Tutorial.h" />
     <ClInclude Include="UIButton.h" />
@@ -242,8 +184,6 @@
     <ClInclude Include="VehicleControllerFactory.h" />
     <ClInclude Include="WaypointFactory.h" />
     <ClInclude Include="WaypointObject.h" />
-    <ClInclude Include="Weapon.h" />
-    <ClInclude Include="Wearable.h" />
     <ClInclude Include="Weather.h" />
     <ClInclude Include="WeightsBatch.h" />
     <ClInclude Include="WorldConfig.h" />
@@ -253,33 +193,188 @@
     <ClInclude Include="Zmap.h" />
     <ClInclude Include="ZoneOpcodes.h" />
     <ClInclude Include="ZoneServer.h" />
+    <ClInclude Include="CellFactory.h" />
+    <ClInclude Include="ContainerObjectFactory.h" />
+    <ClInclude Include="AbstractState.h">
+      <Filter>action</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionState.h">
+      <Filter>action</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionStateEvent.h">
+      <Filter>action</Filter>
+    </ClInclude>
+    <ClInclude Include="ArtisanHeightmapAsyncContainer.h">
+      <Filter>artisan</Filter>
+    </ClInclude>
+    <ClInclude Include="ArtisanManager.h">
+      <Filter>artisan</Filter>
+    </ClInclude>
+    <ClInclude Include="AttackableCreature.h">
+      <Filter>attackable</Filter>
+    </ClInclude>
+    <ClInclude Include="AttackableStaticNpc.h">
+      <Filter>attackable</Filter>
+    </ClInclude>
+    <ClInclude Include="BadgeRegion.h">
+      <Filter>badge</Filter>
+    </ClInclude>
+    <ClInclude Include="Badge.h">
+      <Filter>badge</Filter>
+    </ClInclude>
+    <ClInclude Include="BadgeRegionFactory.h">
+      <Filter>badge</Filter>
+    </ClInclude>
+    <ClInclude Include="Bank.h">
+      <Filter>bank</Filter>
+    </ClInclude>
+    <ClInclude Include="BankTerminal.h">
+      <Filter>bank</Filter>
+    </ClInclude>
+    <ClInclude Include="Buff.h">
+      <Filter>buff</Filter>
+    </ClInclude>
+    <ClInclude Include="BuffAttributeEnums.h">
+      <Filter>buff</Filter>
+    </ClInclude>
+    <ClInclude Include="BuffDBItem.h">
+      <Filter>buff</Filter>
+    </ClInclude>
+    <ClInclude Include="BuffEvent.h">
+      <Filter>buff</Filter>
+    </ClInclude>
+    <ClInclude Include="BuffIconsEnum.h">
+      <Filter>buff</Filter>
+    </ClInclude>
+    <ClInclude Include="BuffManager.h">
+      <Filter>buff</Filter>
+    </ClInclude>
+    <ClInclude Include="BuildingEnums.h">
+      <Filter>building</Filter>
+    </ClInclude>
+    <ClInclude Include="BuildingFactory.h">
+      <Filter>building</Filter>
+    </ClInclude>
+    <ClInclude Include="BuildingObject.h">
+      <Filter>building</Filter>
+    </ClInclude>
+    <ClInclude Include="Camp.h">
+      <Filter>camp</Filter>
+    </ClInclude>
+    <ClInclude Include="CampRegion.h">
+      <Filter>camp</Filter>
+    </ClInclude>
+    <ClInclude Include="CampTerminal.h">
+      <Filter>camp</Filter>
+    </ClInclude>
+    <ClInclude Include="BugJar.h">
+      <Filter>item</Filter>
+    </ClInclude>
+    <ClInclude Include="ChanceCube.h">
+      <Filter>item</Filter>
+    </ClInclude>
+    <ClInclude Include="CraftingStation.h">
+      <Filter>item</Filter>
+    </ClInclude>
+    <ClInclude Include="CraftingTool.h">
+      <Filter>item</Filter>
+    </ClInclude>
+    <ClInclude Include="Deed.h">
+      <Filter>item</Filter>
+    </ClInclude>
+    <ClInclude Include="FactoryCrate.h">
+      <Filter>item</Filter>
+    </ClInclude>
+    <ClInclude Include="Firework.h">
+      <Filter>item</Filter>
+    </ClInclude>
+    <ClInclude Include="Food.h">
+      <Filter>item</Filter>
+    </ClInclude>
+    <ClInclude Include="Instrument.h">
+      <Filter>item</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>item</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemTerminal.h">
+      <Filter>item</Filter>
+    </ClInclude>
+    <ClInclude Include="ManufacturingSchematic.h">
+      <Filter>item</Filter>
+    </ClInclude>
+    <ClInclude Include="Medicine.h">
+      <Filter>item</Filter>
+    </ClInclude>
+    <ClInclude Include="Scout.h">
+      <Filter>item</Filter>
+    </ClInclude>
+    <ClInclude Include="SurveyTool.h">
+      <Filter>item</Filter>
+    </ClInclude>
+    <ClInclude Include="TravelTicket.h">
+      <Filter>item</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapon.h">
+      <Filter>item</Filter>
+    </ClInclude>
+    <ClInclude Include="Wearable.h">
+      <Filter>item</Filter>
+    </ClInclude>
+    <ClInclude Include="Heightmap.h">
+      <Filter>map</Filter>
+    </ClInclude>
+    <ClInclude Include="HeightmapAsyncContainer.h">
+      <Filter>map</Filter>
+    </ClInclude>
+    <ClInclude Include="HeightMapCallback.h">
+      <Filter>map</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectController.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectControllerCommandMap.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectContainer.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjControllerEvent.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="objcontrollercommandmessage.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="Object_Enums.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectControllerDispatch.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectControllerOpcodes.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectFactory.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectFactoryCallback.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="OCCommonHandlers.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="OCStructureHandlers.h">
+      <Filter>handler</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ActionState.cpp" />
-    <ClCompile Include="ActionStateEvent.cpp" />
     <ClCompile Include="ActiveConversation.cpp" />
     <ClCompile Include="AdminManager.cpp" />
-    <ClCompile Include="ArtisanManager.cpp" />
-    <ClCompile Include="AttackableCreature.cpp" />
-    <ClCompile Include="AttackableStaticNpc.cpp" />
-    <ClCompile Include="BadgeRegion.cpp" />
-    <ClCompile Include="BadgeRegionFactory.cpp" />
-    <ClCompile Include="Bank.cpp" />
-    <ClCompile Include="BankTerminal.cpp" />
     <ClCompile Include="BazaarTerminal.cpp" />
-    <ClCompile Include="Buff.cpp" />
-    <ClCompile Include="BuffDBItem.cpp" />
-    <ClCompile Include="BuffEvent.cpp" />
-    <ClCompile Include="BuffManager.cpp" />
-    <ClCompile Include="BugJar.cpp" />
-    <ClCompile Include="BuildingFactory.cpp" />
-    <ClCompile Include="BuildingObject.cpp" />
-    <ClCompile Include="Camp.cpp" />
-    <ClCompile Include="CampRegion.cpp" />
-    <ClCompile Include="CampTerminal.cpp" />
-    <ClCompile Include="CellFactory.cpp" />
     <ClCompile Include="CellObject.cpp" />
-    <ClCompile Include="ChanceCube.cpp" />
     <ClCompile Include="CharacterBuilderTerminal.cpp" />
     <ClCompile Include="CharacterLoginHandler.cpp" />
     <ClCompile Include="CharSheetManager.cpp" />
@@ -289,7 +384,6 @@
     <ClCompile Include="CombatManager.cpp" />
     <ClCompile Include="Container.cpp" />
     <ClCompile Include="ContainerManager.cpp" />
-    <ClCompile Include="ContainerObjectFactory.cpp" />
     <ClCompile Include="Conversation.cpp" />
     <ClCompile Include="ConversationManager.cpp" />
     <ClCompile Include="CraftBatch.cpp" />
@@ -297,8 +391,6 @@
     <ClCompile Include="CraftingSession.cpp" />
     <ClCompile Include="CraftingSessionFactory.cpp" />
     <ClCompile Include="CraftingSessionHelper.cpp" />
-    <ClCompile Include="CraftingStation.cpp" />
-    <ClCompile Include="CraftingTool.cpp" />
     <ClCompile Include="CreatureEventFunctions.cpp" />
     <ClCompile Include="CreatureFactory.cpp" />
     <ClCompile Include="CreatureObject.cpp" />
@@ -306,7 +398,6 @@
     <ClCompile Include="CurrentResource.cpp" />
     <ClCompile Include="Datapad.cpp" />
     <ClCompile Include="DatapadFactory.cpp" />
-    <ClCompile Include="Deed.cpp" />
     <ClCompile Include="DraftSchematic.cpp" />
     <ClCompile Include="DraftSlot.cpp" />
     <ClCompile Include="DraftWeight.cpp" />
@@ -322,13 +413,10 @@
     <ClCompile Include="EVSurveySample.cpp" />
     <ClCompile Include="EVWeapon.cpp" />
     <ClCompile Include="FactoryBase.cpp" />
-    <ClCompile Include="FactoryCrate.cpp" />
     <ClCompile Include="FactoryFactory.cpp" />
     <ClCompile Include="FactoryObject.cpp" />
     <ClCompile Include="FillerNPC.cpp" />
-    <ClCompile Include="Firework.cpp" />
     <ClCompile Include="FireworkManager.cpp" />
-    <ClCompile Include="Food.cpp" />
     <ClCompile Include="ForageManager.cpp" />
     <ClCompile Include="Furniture.cpp" />
     <ClCompile Include="GroupManager.cpp" />
@@ -338,25 +426,19 @@
     <ClCompile Include="HamService.cpp" />
     <ClCompile Include="HarvesterFactory.cpp" />
     <ClCompile Include="HarvesterObject.cpp" />
-    <ClCompile Include="Heightmap.cpp" />
     <ClCompile Include="HouseFactory.cpp" />
     <ClCompile Include="HouseObject.cpp" />
     <ClCompile Include="ImageDesignManager.cpp" />
-    <ClCompile Include="Instrument.cpp" />
     <ClCompile Include="InsuranceTerminal.cpp" />
     <ClCompile Include="IntangibleFactory.cpp" />
     <ClCompile Include="IntangibleObject.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="InventoryFactory.cpp" />
-    <ClCompile Include="Item.cpp" />
     <ClCompile Include="ItemFactory.cpp" />
-    <ClCompile Include="ItemTerminal.cpp" />
     <ClCompile Include="LairObject.cpp" />
     <ClCompile Include="LocomotionState.cpp" />
     <ClCompile Include="LocomotionStateEvent.cpp" />
-    <ClCompile Include="ManufacturingSchematic.cpp" />
     <ClCompile Include="MedicHandlerHelpers.cpp" />
-    <ClCompile Include="Medicine.cpp" />
     <ClCompile Include="MedicManager.cpp" />
     <ClCompile Include="MissionBag.cpp" />
     <ClCompile Include="MissionFactory.cpp" />
@@ -371,61 +453,6 @@
     <ClCompile Include="NonPersistentNpcFactory.cpp" />
     <ClCompile Include="NpcManager.cpp" />
     <ClCompile Include="NPCObject.cpp" />
-    <ClCompile Include="ObjControllerCommandMessage.cpp" />
-    <ClCompile Include="ObjControllerEvent.cpp" />
-    <ClCompile Include="Object.cpp" />
-    <ClCompile Include="ObjectContainer.cpp" />
-    <ClCompile Include="ObjectController.cpp" />
-    <ClCompile Include="ObjectControllerCommandMap.cpp" />
-    <ClCompile Include="ObjectControllerDispatch.cpp" />
-    <ClCompile Include="ObjectFactory.cpp" />
-    <ClCompile Include="ObjectFactoryCallback.cpp" />
-    <ClCompile Include="OCAdminHandlers.cpp" />
-    <ClCompile Include="OCBioEngineerHandlers.cpp" />
-    <ClCompile Include="OCBountyHunterHandlers.cpp" />
-    <ClCompile Include="OCBrawlerHandlers.cpp" />
-    <ClCompile Include="OCCallbackHandlers.cpp" />
-    <ClCompile Include="OCCarbineerHandlers.cpp" />
-    <ClCompile Include="OCCharacterSheethandlers.cpp" />
-    <ClCompile Include="OCCombatHandlers.cpp" />
-    <ClCompile Include="OCCombatMedicHandlers.cpp" />
-    <ClCompile Include="OCCommandoHandlers.cpp" />
-    <ClCompile Include="OCCommonHandlers.cpp" />
-    <ClCompile Include="OCContactListsHandlers.cpp" />
-    <ClCompile Include="OCCrateHandlers.cpp" />
-    <ClCompile Include="OCCreatureHandlerHandlers.cpp" />
-    <ClCompile Include="OCDatapadHandlers.cpp" />
-    <ClCompile Include="OCDataTransformhandlers.cpp" />
-    <ClCompile Include="OCDestroyHandlers.cpp" />
-    <ClCompile Include="OCDoctorHandlers.cpp" />
-    <ClCompile Include="OCEntertainerHandlers.cpp" />
-    <ClCompile Include="OCFencerHandlers.cpp" />
-    <ClCompile Include="OCForceDefenseHandlers.cpp" />
-    <ClCompile Include="OCForceEnhancementHandlers.cpp" />
-    <ClCompile Include="OCForceHealingHandlers.cpp" />
-    <ClCompile Include="OCForceLightsaberHandlers.cpp" />
-    <ClCompile Include="OCForcePowerHandlers.cpp" />
-    <ClCompile Include="OCGroupHandlers.cpp" />
-    <ClCompile Include="OCMarksmanHandlers.cpp" />
-    <ClCompile Include="OCMedicHandlers.cpp" />
-    <ClCompile Include="OCMissionHandlers.cpp" />
-    <ClCompile Include="OCNpcConversationhandlers.cpp" />
-    <ClCompile Include="OCPetHandlers.cpp" />
-    <ClCompile Include="OCPikemanHandlers.cpp" />
-    <ClCompile Include="OCPistoleerHandlers.cpp" />
-    <ClCompile Include="OCPostureHandlers.cpp" />
-    <ClCompile Include="OCRangerHandlers.cpp" />
-    <ClCompile Include="OCResourceContainerHandlers.cpp" />
-    <ClCompile Include="OCRiflemanHandlers.cpp" />
-    <ClCompile Include="OCScoutHandlers.cpp" />
-    <ClCompile Include="OCSkillHandlers.cpp" />
-    <ClCompile Include="OCSmugglerHandlers.cpp" />
-    <ClCompile Include="OCSpatialHandlers.cpp" />
-    <ClCompile Include="OCSquadLeaderHandlers.cpp" />
-    <ClCompile Include="OCStructureHandlers.cpp" />
-    <ClCompile Include="OCSwordsmanHandlers.cpp" />
-    <ClCompile Include="OCTerasKasiHandlers.cpp" />
-    <ClCompile Include="OCTradeHandlers.cpp" />
     <ClCompile Include="PersistentNpcFactory.cpp" />
     <ClCompile Include="PlayerEventFunctions.cpp" />
     <ClCompile Include="PlayerObject.cpp" />
@@ -453,7 +480,6 @@
     <ClCompile Include="ResourceType.cpp" />
     <ClCompile Include="SchematicGroup.cpp" />
     <ClCompile Include="SchematicManager.cpp" />
-    <ClCompile Include="Scout.cpp" />
     <ClCompile Include="ScoutManager.cpp" />
     <ClCompile Include="SendSystemMailMessage.cpp" />
     <ClCompile Include="Shuttle.cpp" />
@@ -472,7 +498,6 @@
     <ClCompile Include="StructureManagerCallbackHandler.cpp" />
     <ClCompile Include="StructureManagerCommandMap.cpp" />
     <ClCompile Include="StructureManagerUIManager.cpp" />
-    <ClCompile Include="SurveyTool.cpp" />
     <ClCompile Include="TangibleFactory.cpp" />
     <ClCompile Include="TangibleObject.cpp" />
     <ClCompile Include="Terminal.cpp" />
@@ -484,7 +509,6 @@
     <ClCompile Include="Trainer.cpp" />
     <ClCompile Include="TravelMapHandler.cpp" />
     <ClCompile Include="TravelTerminal.cpp" />
-    <ClCompile Include="TravelTicket.cpp" />
     <ClCompile Include="TreasuryManager.cpp" />
     <ClCompile Include="Tutorial.cpp" />
     <ClCompile Include="UIButton.cpp" />
@@ -502,8 +526,6 @@
     <ClCompile Include="VehicleControllerFactory.cpp" />
     <ClCompile Include="WaypointFactory.cpp" />
     <ClCompile Include="WaypointObject.cpp" />
-    <ClCompile Include="Weapon.cpp" />
-    <ClCompile Include="Wearable.cpp" />
     <ClCompile Include="WeightsBatch.cpp" />
     <ClCompile Include="WorldConfig.cpp" />
     <ClCompile Include="WorldManager.cpp" />
@@ -513,8 +535,321 @@
     <ClCompile Include="WorldManagerPlayerHandlers.cpp" />
     <ClCompile Include="Zmap.cpp" />
     <ClCompile Include="ZoneServer.cpp" />
+    <ClCompile Include="CellFactory.cpp" />
+    <ClCompile Include="ContainerObjectFactory.cpp" />
+    <ClCompile Include="ActionState.cpp">
+      <Filter>action</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionStateEvent.cpp">
+      <Filter>action</Filter>
+    </ClCompile>
+    <ClCompile Include="ArtisanManager.cpp">
+      <Filter>artisan</Filter>
+    </ClCompile>
+    <ClCompile Include="AttackableCreature.cpp">
+      <Filter>attackable</Filter>
+    </ClCompile>
+    <ClCompile Include="AttackableStaticNpc.cpp">
+      <Filter>attackable</Filter>
+    </ClCompile>
+    <ClCompile Include="BadgeRegion.cpp">
+      <Filter>badge</Filter>
+    </ClCompile>
+    <ClCompile Include="BadgeRegionFactory.cpp">
+      <Filter>badge</Filter>
+    </ClCompile>
+    <ClCompile Include="Bank.cpp">
+      <Filter>bank</Filter>
+    </ClCompile>
+    <ClCompile Include="BankTerminal.cpp">
+      <Filter>bank</Filter>
+    </ClCompile>
+    <ClCompile Include="Buff.cpp">
+      <Filter>buff</Filter>
+    </ClCompile>
+    <ClCompile Include="BuffDBItem.cpp">
+      <Filter>buff</Filter>
+    </ClCompile>
+    <ClCompile Include="BuffEvent.cpp">
+      <Filter>buff</Filter>
+    </ClCompile>
+    <ClCompile Include="BuffManager.cpp">
+      <Filter>buff</Filter>
+    </ClCompile>
+    <ClCompile Include="BuildingFactory.cpp">
+      <Filter>building</Filter>
+    </ClCompile>
+    <ClCompile Include="BuildingObject.cpp">
+      <Filter>building</Filter>
+    </ClCompile>
+    <ClCompile Include="Camp.cpp">
+      <Filter>camp</Filter>
+    </ClCompile>
+    <ClCompile Include="CampRegion.cpp">
+      <Filter>camp</Filter>
+    </ClCompile>
+    <ClCompile Include="CampTerminal.cpp">
+      <Filter>camp</Filter>
+    </ClCompile>
+    <ClCompile Include="BugJar.cpp">
+      <Filter>item</Filter>
+    </ClCompile>
+    <ClCompile Include="ChanceCube.cpp">
+      <Filter>item</Filter>
+    </ClCompile>
+    <ClCompile Include="CraftingStation.cpp">
+      <Filter>item</Filter>
+    </ClCompile>
+    <ClCompile Include="CraftingTool.cpp">
+      <Filter>item</Filter>
+    </ClCompile>
+    <ClCompile Include="Deed.cpp">
+      <Filter>item</Filter>
+    </ClCompile>
+    <ClCompile Include="FactoryCrate.cpp">
+      <Filter>item</Filter>
+    </ClCompile>
+    <ClCompile Include="Firework.cpp">
+      <Filter>item</Filter>
+    </ClCompile>
+    <ClCompile Include="Food.cpp">
+      <Filter>item</Filter>
+    </ClCompile>
+    <ClCompile Include="Instrument.cpp">
+      <Filter>item</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>item</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemTerminal.cpp">
+      <Filter>item</Filter>
+    </ClCompile>
+    <ClCompile Include="ManufacturingSchematic.cpp">
+      <Filter>item</Filter>
+    </ClCompile>
+    <ClCompile Include="Medicine.cpp">
+      <Filter>item</Filter>
+    </ClCompile>
+    <ClCompile Include="Scout.cpp">
+      <Filter>item</Filter>
+    </ClCompile>
+    <ClCompile Include="SurveyTool.cpp">
+      <Filter>item</Filter>
+    </ClCompile>
+    <ClCompile Include="TravelTicket.cpp">
+      <Filter>item</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon.cpp">
+      <Filter>item</Filter>
+    </ClCompile>
+    <ClCompile Include="Wearable.cpp">
+      <Filter>item</Filter>
+    </ClCompile>
+    <ClCompile Include="Heightmap.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectController.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectControllerCommandMap.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectControllerDispatch.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectContainer.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjControllerEvent.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjControllerCommandMessage.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectFactory.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectFactoryCallback.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCAdminHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCBioEngineerHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCBountyHunterHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCBrawlerHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCCallbackHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCCarbineerHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCCharacterSheethandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCCombatHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCCombatMedicHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCCommandoHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCCommonHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCContactListsHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCCrateHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCCreatureHandlerHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCDatapadHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCDataTransformhandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCDestroyHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCDoctorHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCEntertainerHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCFencerHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCForceDefenseHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCForceEnhancementHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCForceHealingHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCForceLightsaberHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCForcePowerHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCGroupHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCMarksmanHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCMedicHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCNpcConversationhandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCMissionHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCPetHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCPikemanHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCPistoleerHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCPostureHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCRangerHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCResourceContainerHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCRiflemanHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCSkillHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCScoutHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCSmugglerHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCSpatialHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCSquadLeaderHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCStructureHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCSwordsmanHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCTerasKasiHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="OCTradeHandlers.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="action">
+      <UniqueIdentifier>{22b0479a-e4df-44d7-bef8-81d35a87b756}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="artisan">
+      <UniqueIdentifier>{e81ddb30-9dd0-4b84-a9db-7b4a21df8ad7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="attackable">
+      <UniqueIdentifier>{5c9cced8-16df-40ef-925a-d2d8f5c8ea79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bank">
+      <UniqueIdentifier>{80775883-eacf-40c3-8076-57231b1e424a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="buff">
+      <UniqueIdentifier>{84c420e2-6ef4-4d02-bd5d-ce3d793d17c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="badge">
+      <UniqueIdentifier>{01fddf63-c725-450f-b3f5-954cb8e86e37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="building">
+      <UniqueIdentifier>{feaa40ad-e59e-40b4-9bfd-df2826ad4a14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="camp">
+      <UniqueIdentifier>{48b3ada9-58c8-422b-b690-460259e2e12c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="item">
+      <UniqueIdentifier>{4efad8ff-be42-48eb-8152-ca8520b3abf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="map">
+      <UniqueIdentifier>{93906c3d-9bfb-4bec-b2a4-7938fb4fbb4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="handler">
+      <UniqueIdentifier>{c2efec67-ec86-4df7-b285-d8da19be8b8d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

@@ -88,8 +88,10 @@ bool ArtisanManager::handleRequestSurvey(Object* playerObject,Object* target,Mes
     PlayerObject*		player = dynamic_cast<PlayerObject*>(playerObject);
     std::shared_ptr<SimpleEvent> start_survey_event = nullptr;
 
-    if(cmdProperties)
-        mSurveyMindCost = cmdProperties->mMindCost;
+	if (cmdProperties)
+	{
+		mSurveyMindCost = cmdProperties->mMindCost;
+	}
 
     // don't allow survey in buildings
     if(player->getParentId())
@@ -180,8 +182,10 @@ bool ArtisanManager::handleRequestSurvey(Object* playerObject,Object* target,Mes
         return false;
     }
     // notify any listeners
-    if (start_survey_event)
-        gEventDispatcher.Notify(start_survey_event);
+	if (start_survey_event)
+	{
+		gEventDispatcher.Notify(start_survey_event);
+	}
     return true;
 }
 
@@ -193,11 +197,13 @@ bool ArtisanManager::handleRequestSurvey(Object* playerObject,Object* target,Mes
 bool ArtisanManager::handleRequestCoreSample(Object* player,Object* target, Message* message,ObjectControllerCmdProperties* cmdProperties)
 {
     PlayerObject*		playerObject = dynamic_cast<PlayerObject*>(player);
-    if(cmdProperties)
-        // unfortunately it's not in this opcode
-        // hardcode for now
-        //mSampleActionCost = cmdProperties->mActionCost;
-        mSampleActionCost = 150;
+	if (cmdProperties)
+	{
+		// unfortunately it's not in this opcode
+		// hardcode for now
+		//mSampleActionCost = cmdProperties->mActionCost;
+		mSampleActionCost = 150;
+	}
 
     if(playerObject->getPerformingState() != PlayerPerformance_None || playerObject->checkIfMounted() || playerObject->isDead() || playerObject->states.checkState(CreatureState_Combat))
     {
@@ -304,8 +310,10 @@ void ArtisanManager::HeightmapArtisanHandler(HeightmapAsyncContainer* ref)
                              std::bind(&ArtisanManager::sampleEvent,this, container->playerObject, container->resource, container->tool));
     }
     // notify any listeners
-    if(start_sample_event)
-        gEventDispatcher.Notify(start_sample_event);
+	if (start_sample_event)
+	{
+		gEventDispatcher.Notify(start_sample_event);
+	}
 
 }
 
@@ -341,8 +349,10 @@ void ArtisanManager::sampleEvent(PlayerObject* player, CurrentResource* resource
     //====================================================
     //check whether we are able to sample in the first place
     //
-    if (stopSampling(player, resource, tool))
-        return;
+	if (stopSampling(player, resource, tool))
+	{
+		return;
+	}
 
     std::string				effect			= gWorldManager->getClientEffect(tool->getInternalAttribute<uint32>("sample_effect"));
     float					ratio			= (resource->getDistribution((int)player->mPosition.x + 8192,(int)player->mPosition.z + 8192));

@@ -41,10 +41,12 @@ public:
     CraftingTool();
     virtual ~CraftingTool();
 
-    Item*	getCurrentItem() {
+    Item*	getCurrentItem()
+	{
         return mCurrentItem;
     }
-    void	setCurrentItem(Item* item) {
+    void	setCurrentItem(Item* item) 
+	{
         mCurrentItem = item;
     }
     virtual void	prepareCustomRadialMenu(CreatureObject* creatureObject, uint8 itemCount);

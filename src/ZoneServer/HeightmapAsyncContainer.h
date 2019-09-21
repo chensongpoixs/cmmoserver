@@ -41,7 +41,7 @@ typedef std::map<std::pair<float, float>, heightResult*> HeightResultMap;
 
 enum HeightmapCallbackTypes
 {
-    HeightmapCallback_ArtisanSurvey,
+    HeightmapCallback_ArtisanSurvey,// 地图手动调节
     HeightmapCallback_StructureHarvester,
     HeightmapCallback_StructureFactory,
     HeightmapCallback_StructureHouse
@@ -74,7 +74,8 @@ public:
     HeightMapCallBack* getCallback() {
         return callback;
     }
-    HeightmapCallbackTypes type;
+public:
+    HeightmapCallbackTypes type;// 地图类型
 
 private:
     HeightResultMap* mHeightResults;

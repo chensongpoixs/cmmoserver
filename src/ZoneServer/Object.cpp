@@ -92,26 +92,47 @@ Object::~Object()
     mInternalAttributeMap.clear();
     mAttributeOrderList.clear();
 
-    std::for_each(mData.begin(), mData.end(), [] (uint64_t object_id) {
-        Object* object = gWorldManager->getObjectById(object_id);
-        if (!object)	{
-            DLOG(INFO) << "ObjectContainer::remove Object : No Object!!!!";
-            assert(false && "ObjectContainer::~ObjectContainer WorldManager unable to find object instance");
-            return;
-        }
+    //std::for_each(mData.begin(), mData.end(), [] (uint64_t object_id) {
+    //    Object* object = gWorldManager->getObjectById(object_id);
+    //    if (!object)	{
+    //        DLOG(INFO) << "ObjectContainer::remove Object : No Object!!!!";
+    //        assert(false && "ObjectContainer::~ObjectContainer WorldManager unable to find object instance");
+    //        return;
+    //    }
 
-        //take care of a crafting tool
-        if(CraftingTool* tool = dynamic_cast<CraftingTool*>(object)) {
-            if(tool->getCurrentItem())	{
-                gWorldManager->removeBusyCraftTool(tool);
-            }
-        }
+    //    //take care of a crafting tool
+    //    if(CraftingTool* tool = dynamic_cast<CraftingTool*>(object)) {
+    //        if(tool->getCurrentItem())	{
+    //            gWorldManager->removeBusyCraftTool(tool);
+    //        }
+    //    }
 
-        //just deinitialization/removal out of mainObjectMap .. NO removal out of si/cells
-        gWorldManager->destroyObject(object);
-    });
+    //    //just deinitialization/removal out of mainObjectMap .. NO removal out of si/cells
+    //    gWorldManager->destroyObject(object);
+    //});
+	for (ObjectIDList::const_iterator iter = mData.begin(); iter != mData.end(); ++iter)
+	{
+		Object* object = gWorldManager->getObjectById(*iter);
+		if (!object)
+		{
+			DLOG(INFO) << "ObjectContainer::remove Object : No Object!!!!";
+			assert(false && "ObjectContainer::~ObjectContainer WorldManager unable to find object instance");
+			return;
+		}
+		//take care of a crafting tool
+		if (CraftingTool* tool = dynamic_cast<CraftingTool*>(object)) 
+		{
+			if (tool->getCurrentItem()) 
+			{
+				gWorldManager->removeBusyCraftTool(tool);
+			}
+		}
 
-    mData.erase(mData.begin(), mData.end());
+		//just deinitialization/removal out of mainObjectMap .. NO removal out of si/cells
+		gWorldManager->destroyObject(object);
+	}
+	mData.clear();
+    //mData.erase(mData.begin(), mData.end());
 }
 
 //=============================================================================

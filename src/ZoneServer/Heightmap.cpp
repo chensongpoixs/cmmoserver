@@ -141,10 +141,14 @@ void Heightmap::fillInIterator(HeightResultMap::iterator it)
 
     heightResult* heightRes = new heightResult;
 
-    if(height & 0x4000)//15th bit
-        heightRes->hasWater = true;
-    else
-        heightRes->hasWater = false;
+	if (height & 0x4000)//15th bit
+	{
+		heightRes->hasWater = true;
+	}
+	else
+	{
+		heightRes->hasWater = false;
+	}
 
     height &= 0x7FFF;
     heightRes->height = ((float)height)/10;
@@ -182,16 +186,20 @@ void Heightmap::RunThread()
             job = Jobs.front();
             Jobs.pop();
         }
-        else
-            job = NULL;
+		else
+		{
+			job = NULL;
+		}
 
         mJobMutex.unlock();
 
         if(job)
         {
             HeightResultMap* map = job->getResults();
-            for(HeightResultMap::iterator it=map->begin(); it != map->end(); it++)
-                fillInIterator(it);
+			for (HeightResultMap::iterator it = map->begin(); it != map->end(); it++)
+			{
+				fillInIterator(it);
+			}
 
             job->getCallback()->heightMapCallback(job);
         }

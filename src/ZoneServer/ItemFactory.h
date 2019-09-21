@@ -57,7 +57,8 @@ class ItemFactory : public FactoryBase, public ObjectFactoryCallback
 {
 public:
 
-    static	ItemFactory*	getSingletonPtr() {
+    static	ItemFactory*	getSingletonPtr() 
+	{
         return mSingleton;
     }
     static	ItemFactory*	Init(Database* database);

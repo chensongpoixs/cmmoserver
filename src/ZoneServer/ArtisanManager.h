@@ -64,7 +64,8 @@ public:
     ~ArtisanManager();
 
     // inherited callbacks
-    virtual void			heightMapCallback(HeightmapAsyncContainer *ref) {
+    virtual void			heightMapCallback(HeightmapAsyncContainer *ref) 
+	{
         HeightmapArtisanHandler(ref);
     }
     void					HeightmapArtisanHandler(HeightmapAsyncContainer* ref);

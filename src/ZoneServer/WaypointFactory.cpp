@@ -82,8 +82,10 @@ void WaypointFactory::handleDatabaseJobComplete(void* ref,DatabaseResult* result
     {
         WaypointObject* waypoint = _createWaypoint(result);
         // can't check waypoints on other planets in tutorial
-        if (!gWorldConfig->isTutorial())
-            asyncContainer->mOfCallback->handleObjectReady(waypoint,asyncContainer->mClient);
+		if (!gWorldConfig->isTutorial())
+		{
+			asyncContainer->mOfCallback->handleObjectReady(waypoint, asyncContainer->mClient);
+		}
     }
     break;
 

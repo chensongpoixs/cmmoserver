@@ -66,7 +66,7 @@ typedef std::map<uint32,OriginalObjectControllerHandler> OriginalCommandMap;
 typedef std::function<bool (Object* object, Object* target, Message*, ObjectControllerCmdProperties*)> ObjectControllerHandler;
 typedef std::map<uint32,ObjectControllerHandler> CommandMap;
 
-typedef std::map<uint32_t,ObjectControllerCmdProperties*>	CmdPropertyMap;
+typedef std::map<uint32_t,ObjectControllerCmdProperties*>	CmdPropertyMap; // 保存配置表的数据
 
 //======================================================================================================================
 
@@ -74,11 +74,12 @@ class ObjectControllerCommandMap : public DatabaseCallback
 {
 public:
 
-    static ObjectControllerCommandMap*  getSingletonPtr() {
+    static ObjectControllerCommandMap*  getSingletonPtr() 
+	{
         return mSingleton;
     }
     static ObjectControllerCommandMap*	Init(Database* database);
-
+	// mysql data backcall --> data
     void								handleDatabaseJobComplete(void* ref,DatabaseResult* result);
 
     void								ScriptRegisterEvent(void* script,std::string eventFunction);

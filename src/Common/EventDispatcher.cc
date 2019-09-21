@@ -40,7 +40,8 @@ EventDispatcher::EventDispatcher(uint64_t current_time)
 EventDispatcher::~EventDispatcher() {}
 
 void EventDispatcher::Connect(const EventType& event_type, EventListener listener) {
-    active_.Send([=] {
+    active_.Send([=] 
+	{
         if (! ValidateEventType_(event_type)) {
             return;
         }
@@ -162,11 +163,16 @@ boost::unique_future<std::vector<EventType>> EventDispatcher::GetRegisteredEvent
 
 void EventDispatcher::Notify(IEventPtr triggered_event) {
     // Sanity check on the event itself.
-    if (!triggered_event) return;
+	if (!triggered_event)
+	{
+		return;
+	}
 
-    active_.Send([=] {
+    active_.Send([=] 
+	{
         // If the timestamp for the event has not yet been set then set it.
-        if (!triggered_event->timestamp()) {
+        if (!triggered_event->timestamp())
+		{
             triggered_event->timestamp(current_timestep_);
         }
 
