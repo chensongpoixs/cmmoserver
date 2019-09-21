@@ -283,7 +283,7 @@ bool ObjectController::_processCommandQueue()
     // If queue empty and we are in combat, insert player initiated auto-attack when the previous command has run out it's cooldown.
     if (mCommandQueue.empty() &&  player->autoAttackEnabled() && (mNextCommandExecution <= currentTime))
     {
-        // Auto attack current target.
+        // Auto attack current target.   为什么玩家自动增加玩家attack ？？？？
         uint64 autoTargetId = player->getCombatTargetId();
         if (autoTargetId != 0)
         {
@@ -373,7 +373,8 @@ bool ObjectController::_processCommandQueue()
                     // Find the target object (if one is given) and pass it in.
                     Object* target = NULL;
 
-                    if (targetId) {
+                    if (targetId) 
+					{
                         target = gWorldManager->getObjectById(targetId);
                     }
 
@@ -387,20 +388,26 @@ bool ObjectController::_processCommandQueue()
                         // Trigger a pre-command processing event and get the result. This allows
                         // any listeners to veto the processing of the command (such as validators).
                         // Only process the command if it passed validation.
-                        if (gEventDispatcher.Deliver(pre_event).get()) {
+                        if (gEventDispatcher.Deliver(pre_event).get()) 
+						{
                             ((*it).second)(mObject, target, message, cmdProperties);
 
                             auto post_event = std::make_shared<PostCommandEvent>(mObject->getId());
                             gEventDispatcher.Deliver(post_event);
                         }
-                    } else {
+                    }
+					else 
+					{
                         // Otherwise, process the old style handler.
                         OriginalCommandMap::iterator it = gObjControllerCmdMap.find(command);
 
-                        if (message && it != gObjControllerCmdMap.end()) {
+                        if (message && it != gObjControllerCmdMap.end())
+						{
                             ((*it).second)(this, targetId, message, cmdProperties);
                             //(this->*((*it).second))(targetId,message,cmdProperties);
-                        } else {
+                        }
+						else 
+						{
                             DLOG(WARNING) << "ObjectController::processCommandQueue: ObjControllerCmdGroup_Common Unhandled Cmd 0"<<command<<" for "<<mObject->getId();
                             //gLogger->hexDump(message->getData(),message->getSize());
                         }

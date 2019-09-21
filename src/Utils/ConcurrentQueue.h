@@ -46,10 +46,12 @@ namespace utils {
  * @see http://www.drdobbs.com/high-performance-computing/212201163
  */
 template <typename T>
-class ConcurrentQueue {
+class ConcurrentQueue 
+{
 public:
     /// Default constructor initializes the queue to a default state.
-    ConcurrentQueue() {
+    ConcurrentQueue() 
+	{
         first_ = last_ = new Node(nullptr);
         consumer_lock_ = producer_lock_ = false;
 
@@ -57,8 +59,10 @@ public:
     }
 
     /// Default destructor cleans up any items remaining in the queue.
-    ~ConcurrentQueue() {
-        while (first_ != nullptr) {
+    ~ConcurrentQueue() 
+	{
+        while (first_ != nullptr) 
+		{
             Node* tmp = first_;
             first_ = tmp->next;
 
@@ -74,12 +78,14 @@ public:
      * 
      *
      */
-	bool filled()	{
+	bool filled()	
+	{
 	
 		// Spin-lock until exclusivity is acquired
 		while (consumer_lock_.fetch_and_store(true)) {}
 
-        if (first_->next != nullptr) {
+        if (first_->next != nullptr) 
+		{
 			consumer_lock_ = false;
 			return true;
         }
@@ -95,7 +101,8 @@ public:
      * This function returns the queues size 
      *
      */
-	int size()	{
+	int size()	
+	{
 		return queuesize;
 	}
 
@@ -107,7 +114,8 @@ public:
      *
      * \param t The item being pushed onto the queue.
      */
-    void push(const T& t) {
+    void push(const T& t) 
+	{
         Node* tmp = new Node(new T(t));
 
         // Spin-lock until exclusivity is acquired
@@ -130,10 +138,12 @@ public:
      * \param t The container to copy the queue item into.
      * \returns Returns true if an item was successfully popped, false if not or the queue was empty.
      */
-    bool pop(T& t) {
+    bool pop(T& t) 
+	{
         while (consumer_lock_.fetch_and_store(true)) {}
 
-        if (first_->next != nullptr) {
+        if (first_->next != nullptr) 
+		{
             Node* old_first = first_;
             Node* first = first_->next;
 
@@ -163,10 +173,12 @@ public:
      *
      * \returns Returns pointer to the first container on the queue
      */
-    bool front(T& t) {
+    bool front(T& t) 
+	{
         while (consumer_lock_.fetch_and_store(true)) {}
 
-        if (first_->next != nullptr) {
+        if (first_->next != nullptr) 
+		{
             
 			Node* first = first_->next;
 			T* value = first->value;
@@ -185,8 +197,10 @@ public:
 private:
     // Node element used by the queue which holds the contained item and a pointer
     // to the next node in the queue.
-    struct Node {
-        Node(T* val) : value(val) {
+    struct Node 
+	{
+        Node(T* val) : value(val) 
+		{
             next = nullptr;
         }
 
@@ -222,17 +236,21 @@ private:
 };
 
 template <typename T>
-class ConcurrentQueueLight {
+class ConcurrentQueueLight 
+{
 public:
     /// Default constructor initializes the queue to a default state.
-    ConcurrentQueueLight() {
+    ConcurrentQueueLight() 
+	{
         first_ = last_ = new Node(nullptr);
         consumer_lock_ = producer_lock_ = false;
     }
 
     /// Default destructor cleans up any items remaining in the queue.
-    ~ConcurrentQueueLight() {
-        while (first_ != nullptr) {
+    ~ConcurrentQueueLight() 
+	{
+        while (first_ != nullptr) 
+		{
             Node* tmp = first_;
             first_ = tmp->next;
 
@@ -248,12 +266,14 @@ public:
      * 
      *
      */
-	bool filled()	{
+	bool filled()	
+	{
 	
 		// Spin-lock until exclusivity is acquired
 		while (consumer_lock_.fetch_and_store(true)) {}
 
-        if (first_->next != nullptr) {
+        if (first_->next != nullptr) 
+		{
 			consumer_lock_ = false;
 			return true;
         }
@@ -270,7 +290,8 @@ public:
      *
      * \param t The item being pushed onto the queue.
      */
-    void push(const T& t) {
+    void push(const T& t) 
+	{
         Node* tmp = new Node(new T(t));
 
         // Spin-lock until exclusivity is acquired
@@ -290,10 +311,12 @@ public:
      * \param t The container to copy the queue item into.
      * \returns Returns true if an item was successfully popped, false if not or the queue was empty.
      */
-    bool pop(T& t) {
+    bool pop(T& t) 
+	{
         while (consumer_lock_.fetch_and_store(true)) {}
 
-        if (first_->next != nullptr) {
+        if (first_->next != nullptr) 
+		{
             Node* old_first = first_;
             Node* first = first_->next;
 
@@ -321,10 +344,12 @@ public:
      *
      * \returns Returns pointer to the first container on the queue
      */
-    bool front(T& t) {
+    bool front(T& t) 
+	{
         while (consumer_lock_.fetch_and_store(true)) {}
 
-        if (first_->next != nullptr) {
+        if (first_->next != nullptr) 
+		{
             
 			Node* first = first_->next;
 			T* value = first->value;
@@ -343,8 +368,10 @@ public:
 private:
     // Node element used by the queue which holds the contained item and a pointer
     // to the next node in the queue.
-    struct Node {
-        Node(T* val) : value(val) {
+    struct Node 
+	{
+        Node(T* val) : value(val) 
+		{
             next = nullptr;
         }
 

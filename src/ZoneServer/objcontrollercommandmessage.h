@@ -69,7 +69,7 @@ protected:
     uint64		mExecutionTime;
     uint64		mQueuedTime;
     uint64		mTargetId;
-    uint32		mOpcode;
+    uint32		mOpcode;    // m_msg_id
     uint32		mSequence;
 };
 

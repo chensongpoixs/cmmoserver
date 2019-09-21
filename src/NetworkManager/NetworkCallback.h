@@ -40,11 +40,14 @@ class Message;
 class NetworkCallback
 {
 public:
-
-    virtual NetworkClient*  handleSessionConnect(Session* session, Service* service)            {
+	// 连接上回调函数
+    virtual NetworkClient*  handleSessionConnect(Session* session, Service* service)         
+	{
         return (NetworkClient*)-1;
     };
+	// 断开连接回调函数
     virtual void            handleSessionDisconnect(NetworkClient* client)                      {};
+	// 接收消息的回调函数
     virtual void            handleSessionMessage(NetworkClient* client, Message* message)       {};
 
 private:

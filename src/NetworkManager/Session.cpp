@@ -385,8 +385,10 @@ void Session::ProcessWriteThread(void)
 
             // If we've sent our mWindowSizeCurrent of packets, break out and wait for some acks.
             // make sure we send at least a minimum as we dont want any stalling
-            if (packetsSent >= mWindowSizeCurrent)
-                break;
+			if (packetsSent >= mWindowSizeCurrent)
+			{
+				break;
+			}
 
             _addOutgoingReliablePacket(windowPacket);
 			//dont call the mutex again were already in it
@@ -417,8 +419,10 @@ void Session::ProcessWriteThread(void)
 
         // If we've sent our mWindowSizeCurrent of packets, break out and wait for some acks.
         // make sure we send at least a minimum as we dont wont any stalling
-        if (packetsSent >= mWindowSizeCurrent)
-            break;
+		if (packetsSent >= mWindowSizeCurrent)
+		{
+			break;
+		}
 
 		_addOutgoingReliablePacket(windowPacket);
 		//the sessionmutex is already called
@@ -484,11 +488,14 @@ void Session::ProcessWriteThread(void)
         }
         else if (this->mServerService && (t > 20000))
         {
-            if((now - mLastPingPacketSent) > 2000)
-                _sendPingPacket();
+			if ((now - mLastPingPacketSent) > 2000)
+			{
+				_sendPingPacket();
+			}
         }
         //dont spend time here to often (calling mutexes and such)
-	    if(now - mLastHouseKeepingTimeTime < 1000)    {
+	    if(now - mLastHouseKeepingTimeTime < 1000)   
+		{
             if(!mCommand)
 			    return;
         }
@@ -497,14 +504,16 @@ void Session::ProcessWriteThread(void)
     }
 
 	//dont spend time here to often (calling mutexes and such)
-	if(now - mLastHouseKeepingTimeTime < 1000)    {
+	if(now - mLastHouseKeepingTimeTime < 1000)   
+	{
 		return;
     }
 
 	mLastHouseKeepingTimeTime = now;
 
 	//we might stall if the last packets get lost and the client wont generate ooo packets ( or those get lost)
-    if(!this->mServerService )    {
+    if(!this->mServerService ) 
+	{
         _resendData();
     }
 
@@ -2297,9 +2306,10 @@ void Session::_buildOutgoingReliableRoutedPackets(Message* message)
 
         mNewWindowPacketList.push_back(newPacket);
 
-        if(!++mOutSequenceNext)
-            _handleOutSequenceRollover();
-
+		if (!++mOutSequenceNext)
+		{
+			_handleOutSequenceRollover();
+		}
         lk.unlock();
 
         // Now build any remaining packets.
@@ -2327,8 +2337,10 @@ void Session::_buildOutgoingReliableRoutedPackets(Message* message)
 
             mNewWindowPacketList.push_back(newPacket);
 
-            if(!++mOutSequenceNext)
-                _handleOutSequenceRollover();
+			if (!++mOutSequenceNext)
+			{
+				_handleOutSequenceRollover();
+			}
         }
     }
     else
@@ -2355,8 +2367,10 @@ void Session::_buildOutgoingReliableRoutedPackets(Message* message)
 
         mNewWindowPacketList.push_back(newPacket);
 
-        if(!++mOutSequenceNext)
-            _handleOutSequenceRollover();
+		if (!++mOutSequenceNext)
+		{
+			_handleOutSequenceRollover();
+		}
     }
     message->setPendingDelete(true);
 }
@@ -2560,10 +2574,14 @@ uint32 Session::_buildPackets()
     {
         packetsbuild++;
 
-        if(message->getRouted())
-            _buildOutgoingReliableRoutedPackets(message);
-        else
-            _buildOutgoingReliablePackets(message);
+		if (message->getRouted())
+		{
+			_buildOutgoingReliableRoutedPackets(message);
+		}
+		else
+		{
+			_buildOutgoingReliablePackets(message);
+		}
 
         message->setPendingDelete(true);
     }

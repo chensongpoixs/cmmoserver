@@ -64,25 +64,29 @@ public:
 
     void	AddSessionToProcessQueue(Session* session);
     //void	AddNetworkCallback(NetworkCallback* callback){ mNetworkCallbackList.push_back(callback); }
-    void	AddNetworkCallback(NetworkCallback* callback) {
-
+    void	AddNetworkCallback(NetworkCallback* callback) 
+	{
         mCallBack = callback;
     }
 
 
     int8*	getLocalAddress(void);
     uint16	getLocalPort(void);
-    uint32	getId(void) {
+    uint32	getId(void) 
+	{
         return mId;
     };
 
-    void	setId(uint32 id) {
+    void	setId(uint32 id) 
+	{
         mId = id;
     };
-    void	setQueued(bool b) {
+    void	setQueued(bool b) 
+	{
         mQueued = b;
     }
-    bool	isQueued() {
+    bool	isQueued() 
+	{
         return mQueued;
     }
 

@@ -69,10 +69,12 @@ public:
     virtual void	SendChannelAUnreliable(Message* message, uint8 priority);
     virtual void	Disconnect(uint8 reason);
 
-    Session*		getSession(void) {
+    Session*		getSession(void)
+	{
         return mSession;
     }
-    void			setSession(Session* session) {
+    void			setSession(Session* session) 
+	{
         mSession = session;
     }
 

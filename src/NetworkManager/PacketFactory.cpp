@@ -36,10 +36,14 @@ PacketFactory::PacketFactory(bool serverservice, NetworkConfig& network_configur
 {
     mPacketCount = 0;
 
-    if(serverservice)
-        mMaxPayLoad = network_configuration.getServerToServerReliableSize();
-    else
-        mMaxPayLoad = network_configuration.getServerToClientReliableSize();
+	if (serverservice)
+	{
+		mMaxPayLoad = network_configuration.getServerToServerReliableSize();
+	}
+	else
+	{
+		mMaxPayLoad = network_configuration.getServerToClientReliableSize();
+	}
 }
 
 

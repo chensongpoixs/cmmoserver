@@ -112,7 +112,7 @@ private:
     uint32				reliablePackets;
     uint32				unReliablePackets;
     
-	bool				mServerService;
+	bool				mServerService;   // 是否作为服务端使用
 	
     // Anh_Utils::Clock*	mClock;
 

@@ -146,9 +146,9 @@ Service::Service(NetworkManager* networkManager, bool serverservice, uint32 id, 
     setsockopt(mLocalSocket,SOL_SOCKET,SO_RCVBUF,(char*)&value,valuelength);
 
     int temp = 1;
-    //9 is IP_DONTFRAG (PK told me to put that here so we know wtf 9 means :P
+    //9 is IP_DONTFRAG (PK told me to put that here so we know wtf 9 means :P  __ TODO@chensong --> 丢弃大组的包
     setsockopt(mLocalSocket, IPPROTO_IP, 9, (char*)&temp, sizeof(temp));
-
+	// TODO@chensong ---- > 9 ---> IP_MULTICAST_IF
 
     // Create our read/write socket classes
     mSocketWriteThread = new SocketWriteThread(mLocalSocket,this,mServerService, network_configuration);
