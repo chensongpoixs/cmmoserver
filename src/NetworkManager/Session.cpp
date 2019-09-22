@@ -900,14 +900,16 @@ void Session::HandleFastpathPacket(Packet* packet)
     priority = packet->getUint8();
 
     routed = packet->getUint8();
-    if (routed)    {
+    if (routed)   
+	{
         dest = packet->getUint8();
         accountId = packet->getUint32();
     }
 
 	//make sure we dont crush our heap when busy
 	//reliables can be easily spared
-	if(mMessageFactory->getHeapsize() >= 95.0)	{
+	if(mMessageFactory->getHeapsize() >= 95.0)	
+	{
 		//assert(false);
 		mPacketFactory->DestroyPacket(packet);
 		return;
@@ -918,7 +920,8 @@ void Session::HandleFastpathPacket(Packet* packet)
 	Message* newMessage;
     mMessageFactory->StartMessage();
 
-    if (routed)    {
+    if (routed)   
+	{
         mMessageFactory->addData(packet->getData() + 7, packet->getSize() - 7); // +2 priority/routed, +5 routing header
 		newMessage = mMessageFactory->EndMessage();
 		newMessage->setPriority(priority);
@@ -927,7 +930,8 @@ void Session::HandleFastpathPacket(Packet* packet)
 		newMessage->setFastpath(true);
         newMessage->setRouted(true);
     }
-    else    {
+    else    
+	{
         mMessageFactory->addData(packet->getData() + 2, packet->getSize() - 2); // +2 priority/routed
 		newMessage = mMessageFactory->EndMessage();
 		newMessage->setPriority(priority);
@@ -1000,8 +1004,10 @@ Message* Session::getIncomingQueueMessage()
     Message* message = 0;
 
 
-    if (!mIncomingMessageQueue.size())
-        return message;
+	if (!mIncomingMessageQueue.size())
+	{
+		return message;
+	}
 
     boost::recursive_mutex::scoped_lock lk(mSessionMutex);
 

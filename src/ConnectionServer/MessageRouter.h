@@ -67,10 +67,12 @@ public:
 
     void	RouteMessage(Message* message, ConnectionClient* client);
 
-    void	setClientManager(ClientManager* manager) {
+    void	setClientManager(ClientManager* manager) 
+	{
         mClientManager = manager;
     }
-    void	setServerManager(ServerManager* manager) {
+    void	setServerManager(ServerManager* manager) 
+	{
         mServerManager = manager;
     }
 

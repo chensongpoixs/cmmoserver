@@ -76,7 +76,8 @@ public:
         mSize = len;
         mIndex = 0;
     }
-    void                        ResetIndex(void)                  {
+    void                        ResetIndex(void)      
+	{
         mIndex = 0;
     }
 
@@ -98,7 +99,8 @@ public:
     uint8                       getDestinationId(void)            {
         return mDestinationId;
     }
-    bool                        getRouted(void)                   {
+    bool                        getRouted(void)     
+	{
         return mRouted;
     }
     uint64                      getCreateTime(void)               {
@@ -129,7 +131,8 @@ public:
     void                        setAccountId(uint32 id)           {
         mAccountId = id;
     }
-    void                        setDestinationId(uint8 id)        {
+    void                        setDestinationId(uint8 id)     
+	{
         mDestinationId = id;
     }
     void                        setRouted(bool routed)            {
@@ -144,7 +147,8 @@ public:
     void                        setFastpath(bool fastpath)        {
         mFastpath = fastpath;
     }
-    void                        setPendingDelete(bool pending)    {
+    void                        setPendingDelete(bool pending)    
+	{
         mPendingDelete = pending;
     }
 

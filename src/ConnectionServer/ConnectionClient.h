@@ -69,7 +69,8 @@ public:
     void                          setState(ConnectionClientState state)     {
         mState = state;
     }
-    void                          setAccountId(uint32 id)                   {
+    void                          setAccountId(uint32 id)    
+	{
         mAccountId = id;
     }
     void                          setServerId(uint32 id)                    {

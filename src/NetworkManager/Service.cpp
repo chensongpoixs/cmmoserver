@@ -211,11 +211,15 @@ void Service::Process()
     for(uint32 i = 0; i < sessionCount; i++)
     {
         // Grab our next Service to process
-        if(!mSessionProcessQueue.pop(session))
+		if (!mSessionProcessQueue.pop(session))
+		{
 			break;
+		}
 
-		if(!session)
+		if (!session)
+		{
 			continue;
+		}
 
         session->setInIncomingQueue(false);
 

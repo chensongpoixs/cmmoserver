@@ -104,20 +104,25 @@ public:
 
 
     // Accessor methods
-    NetworkClient*              getClient(void)                                 {
+    NetworkClient*              getClient(void)        
+	{
         return mClient;
     }
-    Service*                    getService(void)                                {
+    Service*                    getService(void)   
+	{
         return mService;
     }
-    uint32                      getId(void)                                     {
+    uint32                      getId(void)           
+	{
         return mId;
     }
-    uint32                      getAddress(void)                                {
+    uint32                      getAddress(void)          
+	{
         return mAddress;
     }
     int8*                       getAddressString(void);
-    uint16                      getPort(void)                                   {
+    uint16                      getPort(void)             
+	{
         return mPort;
     }
     uint16                      getPortHost(void);
@@ -126,69 +131,89 @@ public:
    
     bool						getOutgoingUnreliablePacket(Packet*& packet);
 
-    uint32                      getIncomingQueueMessageCount()    {
+    uint32                      getIncomingQueueMessageCount()  
+	{
         return mIncomingMessageQueue.size();
     }
     Message*                    getIncomingQueueMessage();
-    uint32                      getEncryptKey(void)                             {
+    uint32                      getEncryptKey(void)         
+	{
         return mEncryptKey;
     }
-    SessionStatus               getStatus(void)                                 {
+    SessionStatus               getStatus(void)          
+	{
         return mStatus;
     }
-    SessionCommand              getCommand(void)                                {
+    SessionCommand              getCommand(void) 
+	{
         return mCommand;
     }
-    bool                        getInOutgoingQueue(void)                        {
+    bool                        getInOutgoingQueue(void)   
+	{
         return mInOutgoingQueue;
     }
-    bool                        getInIncomingQueue(void)                        {
+    bool                        getInIncomingQueue(void)      
+	{
         return mInIncomingQueue;
     }
-    uint32					  getResendWindowSize()							  {
+    uint32					  getResendWindowSize()		
+	{
         return mWindowResendSize;
     }
 
-	uint32					  getWindowSizeCurrent()							{
+	uint32					  getWindowSizeCurrent()		
+	{
         return mWindowSizeCurrent;
     }
 
 
-    void						  setResendWindowSize(uint32 resendWindowSize)	  {
+    void						  setResendWindowSize(uint32 resendWindowSize)	 
+	{
         mWindowResendSize = resendWindowSize;
         mWindowSizeCurrent = resendWindowSize;
     }
-    void                        setClient(NetworkClient* client)                {
+    void                        setClient(NetworkClient* client)            
+	{
         mClient = client;
     }
-    void                        setService(Service* service)                    {
+    void                        setService(Service* service)        
+	{
         mService = service;
     }
-    void                        setSocketReadThread(SocketReadThread* thread)   {
+    void                        setSocketReadThread(SocketReadThread* thread)  
+	{
         mSocketReadThread = thread;
     }
-    void                        setSocketWriteThread(SocketWriteThread* thread) {
+    void                        setSocketWriteThread(SocketWriteThread* thread) 
+	{
         mSocketWriteThread = thread;
     }
-    void                        setPacketFactory(PacketFactory* factory)        {
+    void                        setPacketFactory(PacketFactory* factory)     
+	{
         mPacketFactory = factory;
     }
-    void                        setMessageFactory(MessageFactory* factory)      {
+    void                        setMessageFactory(MessageFactory* factory) 
+	{
         mMessageFactory = factory;
     }
-    void                        setId(uint32 id)                                {
+    void                        setId(uint32 id)                          
+	{
         mId = id;
     }
-    void                        setAddress(uint32 address)					  {
+    void                        setAddress(uint32 address)			
+	{
         mAddress = address;
     }
-    void                        setPort(uint16 port)                            {
+    void                        setPort(uint16 port)                 
+	{
         mPort = port;
     }
-    void                        setEncryptKey(uint32 key)                       {
+    void                        setEncryptKey(uint32 key)     
+	{
         mEncryptKey = key;
     }
-    void                        setStatus(SessionStatus status)                 {
+    void                        setStatus(SessionStatus status)          
+	{
         mStatus = status;
     }
     void                        setCommand(SessionCommand command)              {
@@ -338,7 +363,7 @@ private:
     MessageQueue                mOutgoingMessageQueue;		//here we store the messages given to us by the messagelib
     ConcurrentMessageQueue      mUnreliableMessageQueue;
 
-    MessageQueue                mIncomingMessageQueue;
+    MessageQueue                mIncomingMessageQueue;  // 接收数据包的队列
     MessageQueue				mMultiMessageQueue;
     MessageQueue				mRoutedMultiMessageQueue;
     MessageQueue				mMultiUnreliableQueue;

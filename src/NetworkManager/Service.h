@@ -92,7 +92,7 @@ public:
 
 private:
 
-    NetworkCallback*		mCallBack;
+    NetworkCallback*		mCallBack;     //     clientservice, serverservice, routerservice --> virtual
     //NetworkCallbackList		mNetworkCallbackList;
 
     SessionQueue			mSessionProcessQueue;

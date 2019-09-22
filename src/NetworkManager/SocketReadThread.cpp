@@ -253,6 +253,7 @@ void SocketReadThread::run(void)
                 // We should only be creating a new session if it's a session request packet
                 if(packetType == SESSIONOP_SessionRequest)
                 {
+					// 新的客户端连接上服务器的加入回话管理中
                     session = mSessionFactory->CreateSession();
                     session->setSocketReadThread(this);
                     session->setPacketFactory(mPacketFactory);
@@ -470,7 +471,8 @@ void SocketReadThread::NewOutgoingConnection(const int8* address, uint16 port)
 
 void SocketReadThread::RemoveAndDestroySession(Session* session)
 {
-    if (! session) {
+    if (! session) 
+	{
         return;
     }
 

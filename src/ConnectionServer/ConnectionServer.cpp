@@ -139,6 +139,7 @@ ConnectionServer::ConnectionServer(int argc, char* argv[]) :
 
     // Startup our router modules.
     mConnectionDispatch = new ConnectionDispatch();
+	// net init นคื๗
     mMessageRouter = new MessageRouter(mDatabase, mConnectionDispatch);
     mClientManager = new ClientManager(mClientService, mDatabase, mMessageRouter, mConnectionDispatch, mClusterId);
     mServerManager = new ServerManager(mServerService, mDatabase, mMessageRouter, mConnectionDispatch,mClientManager, mClusterId);
